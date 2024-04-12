@@ -3,7 +3,7 @@ import Banner from "../banner/Banner";
 
 const Home = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             <Banner></Banner>
 
         </div>

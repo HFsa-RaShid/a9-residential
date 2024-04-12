@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import register from '../../assets/image/p.png'
+import registerBackground from '../../assets/image/bg.jpg'
 
 
 
@@ -41,13 +41,13 @@ const Register = () => {
         })
     }
     return (
-        <div className="hero min-h-[571px] bg-base-200 rounded-2xl mb-8 flex justify-around">
-             <img src={register} className="h-[400px]" />
+        <div className="hero min-h-[571px]" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${registerBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+       
         <div className="hero-content flex-col w-[500px]">
             
-            <h1 className="text-5xl font-bold">Register now!</h1>
+            <h1 className="text-5xl font-bold text-white">Register now!</h1>
             
-            <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100">
+            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form className="card-body " onSubmit={handleRegister} ref={formRef}>
                 <div className="form-control">
                 <label className="label">

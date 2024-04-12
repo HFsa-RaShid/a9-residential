@@ -5,7 +5,8 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../firebase/firebaseinfo.config";
-import loginLogo from '../../assets/image/bg-login.png'
+
+import registerBackground from '../../assets/image/bg.jpg'
 
 const LogIn = () => {
   const {signInUser}=useContext(AuthContext)
@@ -63,10 +64,10 @@ const handleGithubLogIn = () =>{
 
 
     return (
-      <div className="hero max-h-screen bg-base-200 rounded-2xl mb-6 flex justify-around">
+      <div className="hero max-h-screen" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${registerBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="hero-content flex-col w-[500px] ">
           
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-5xl font-bold text-white">Sign In now!</h1>
           
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form className="card-body" onSubmit={handleLogin} ref={formRef}>
@@ -112,7 +113,7 @@ const handleGithubLogIn = () =>{
           </div>
           
       </div>
-       <img src={loginLogo}/>
+    
       
   </div>
     );
