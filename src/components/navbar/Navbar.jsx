@@ -45,11 +45,12 @@ const Navbar = () => {
                   {links}
                 </ul>
               </div>
-              <div className="flex items-center animate__animated animate__fadeInLeft">
-              <RiHomeHeartFill className="w-[50px] h-[50px]" />
-                <div className="text-xl font-extrabold ">
-                <h1><span className="text-3xl text-blue-800">S</span>weet</h1>
-              <h1 >Home</h1>
+              <div className=" animate__animated animate__fadeInLeft">
+              <h1 className="text-black text-[18px]"><span className="text-4xl text-black font-bold">S</span>weet</h1>
+                <div className=" flex ml-3">
+                
+                <RiHomeHeartFill className="w-[30px] h-[30px]" />
+              <h1 className="text-black text-[18px]"><span className="text-2xl text-black font-bold">H</span>ome</h1>
                 </div>
               
               </div>

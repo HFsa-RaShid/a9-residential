@@ -7,6 +7,7 @@ const Home = () => {
     return (
         <div className="container mx-auto mt-6">
             <Banner></Banner>
+            <Service></Service>
             <div className="hero h-[600px] relative mb-10">
                 <div className="h-full w-full">
                     <div className="h-[200px]">
@@ -15,7 +16,7 @@ const Home = () => {
                     <div className=" h-[400px] w-[80%] rounded-2xl relative bg-[#79BBBC]">
                         <div className="w-[50%] absolute top-10 left-10 animate__animated animate__fadeInUp">
                             <h1 className="text-white text-[40px]  font-bold ">
-                            Ready to get started.Let's work together!
+                            Would you like to live in Sweet Homes?
 
                              </h1>
                             <div className="flex justify-between text-white mt-6">
@@ -43,7 +44,7 @@ const Home = () => {
 
             </div>
 
-            <Service></Service>
+            
 
         </div>
     );
