@@ -7,6 +7,9 @@ import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from
 import app from "../../firebase/firebaseinfo.config";
 
 import registerBackground from '../../assets/image/bg.jpg'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const LogIn = () => {
   const {signInUser}=useContext(AuthContext)
@@ -22,7 +25,11 @@ const [user,setUser] =useState(null);
         const loggedInUser = result.user;
         console.log(loggedInUser);
         setUser(loggedInUser);
-        window.location.href = "/";
+        toast.success('Logged In successfully');
+        setTimeout(() => {
+            window.location.href = "/";
+        }, 1000);
+        
     })
     .catch(error =>{
         console.log('error',error.message);
@@ -30,6 +37,7 @@ const [user,setUser] =useState(null);
 
   }
 //   google login end
+
 // github login start
 const githubProvider = new GithubAuthProvider();
 const handleGithubLogIn = () =>{
@@ -38,7 +46,10 @@ const handleGithubLogIn = () =>{
         const loggedUser = result.user;
         console.log(loggedUser);
         setUser(loggedUser);
-        window.location.href = "/";
+        toast.success('Logged In successfully');
+        setTimeout(() => {
+            window.location.href = "/";
+        }, 1000);
     })
     .catch(error =>{
         console.log('error',error.message);
@@ -46,6 +57,7 @@ const handleGithubLogIn = () =>{
 }
 // github login end
 
+//email & password  
 
   const handleLogin = e =>{
     e.preventDefault();
@@ -57,10 +69,16 @@ const handleGithubLogIn = () =>{
     .then(result =>{
         console.log(result.user);
         formRef.current.reset();
-        window.location.href = "/";
+        toast.success('Logged In successfully');
+        setTimeout(() => {
+            window.location.href = "/";
+        }, 1000);
+        
     })
     .catch(error =>{
         console.error(error)
+        toast.error('Invalid email or password. Please try again.')
+        
     })
       
   }
@@ -116,7 +134,8 @@ const handleGithubLogIn = () =>{
           </div>
           
       </div>
-    
+      
+      <ToastContainer />
       
   </div>
     );

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Home = () => {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-6">
             <Banner></Banner>
             <div className="hero h-[600px] relative mb-10" >
                 <div className="h-full w-full">

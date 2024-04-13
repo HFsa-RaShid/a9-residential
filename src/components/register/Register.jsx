@@ -1,7 +1,8 @@
 import { useContext, useRef} from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import registerBackground from '../../assets/image/bg.jpg'
 import { updateProfile } from "firebase/auth";
 
@@ -35,6 +36,7 @@ const Register = () => {
         createUser(email,password)
         .then(result => {
             console.log(result.user)
+            // UPDATE profile
             updateProfile(result.user,{
                 displayName: name,
                 photoURL: photoUrl,
@@ -45,8 +47,12 @@ const Register = () => {
             .catch(error => {
                 console.error(error)
             })
+
             formRef.current.reset();
-            window.location.href = "/";
+            toast.success('Registered successfully');
+            setTimeout(() => {
+            window.location.href = "/"; 
+            }, 1000);
         })
         .catch(error => {
             console.error(error)
@@ -57,7 +63,7 @@ const Register = () => {
        
         <div className="hero-content flex-col w-[500px]">
             
-            <h1 className="text-5xl font-bold text-white">Register now!</h1>
+            <h1 className="text-4xl font-bold text-white">Register Here!</h1>
             
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-70">
             <form className="card-body " onSubmit={handleRegister} ref={formRef}>
@@ -106,6 +112,7 @@ const Register = () => {
             </Link></p>
             </div>
         </div>
+        <ToastContainer />
        
     </div>
         

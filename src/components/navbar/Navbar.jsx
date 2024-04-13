@@ -1,9 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
-
 import { RiHomeHeartFill } from "react-icons/ri";
-import registerBackground from '../../assets/image/bg.jpg'
 
 const Navbar = () => {
   const {user,logOut} = useContext(AuthContext);
@@ -14,7 +12,6 @@ const Navbar = () => {
     .catch()
 
   }
-
 
     const links =
     <>
@@ -36,7 +33,7 @@ const Navbar = () => {
     
     </>
     return (
-        <div className="navbar mb-2 sticky top-0 z-50  shadow-2xl bg-slate-50 container mx-auto">
+        <div className="navbar sticky top-0 z-50  shadow-2xl bg-slate-50 container mx-auto">
             <div className="navbar-start ">
               <div className="dropdown ">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -64,7 +61,7 @@ const Navbar = () => {
               {
                 user ?
                     <div className="flex gap-3">
-                        <div className="tooltip tooltip-hover tooltip-top"     data-tip={user.displayName}>
+                        <div className="tooltip tooltip-hover tooltip-bottom" data-tip={user.displayName}>
                           <div className="w-10 h-10 rounded-full border border-black">
                         
                             <img alt="Tailwind CSS Navbar component" src={user.photoURL} className="h-full w-full mx-auto rounded-full" />
