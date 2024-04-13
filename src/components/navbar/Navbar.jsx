@@ -2,13 +2,15 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { RiHomeHeartFill } from "react-icons/ri";
-
+import 'animate.css';
 const Navbar = () => {
   const {user,logOut} = useContext(AuthContext);
   console.log(user);
   const handleSignOut = () =>{
     logOut()
-    .then()
+    .then(() =>{
+      window.location.href = "/";
+    })
     .catch()
 
   }
@@ -17,14 +19,14 @@ const Navbar = () => {
     <>
     {
       user ?
-      <div className="flex font-semibold text-[18px] ">
+      <div className="flex font-semibold text-[18px] animate__animated animate__fadeInDown">
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
         <li><NavLink to='/userProfile'>User Profile</NavLink></li>
         <li> <NavLink to='/contact'>Contact Us</NavLink></li>
       </div>
       :
-      <div className="flex font-semibold text-[18px]">
+      <div className="flex font-semibold text-[18px] animate__animated animate__fadeInDown">
         <li><NavLink to='/'>Home</NavLink></li>
       <li> <NavLink to='/contact'>Contact Us</NavLink></li>
       </div>
@@ -43,7 +45,7 @@ const Navbar = () => {
                   {links}
                 </ul>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center animate__animated animate__fadeInLeft">
               <RiHomeHeartFill className="w-[50px] h-[50px]" />
                 <div className="text-xl font-extrabold ">
                 <h1><span className="text-3xl text-blue-800">S</span>weet</h1>
@@ -60,7 +62,7 @@ const Navbar = () => {
             <div className="navbar-end">
               {
                 user ?
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 animate__animated animate__fadeInRight">
                         <div className="tooltip tooltip-hover tooltip-bottom" data-tip={user.displayName}>
                           <div className="w-10 h-10 rounded-full border border-black">
                         
@@ -76,7 +78,7 @@ const Navbar = () => {
                 
 
                 :
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 animate__animated animate__fadeInRight ">
                       <Link to='/login'><button className="py-2 px-4 bg-black text-white rounded-xl">Sign In</button></Link>
                     {/* <Link to='register'><button className="py-2 px-4 bg-white rounded-xl text-black border border-black font-bold">Register</button></Link> */}
                     </div>

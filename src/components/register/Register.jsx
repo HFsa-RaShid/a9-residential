@@ -1,16 +1,17 @@
-import { useContext, useRef} from "react";
+import { useContext, useRef, useState} from "react";
 import { Link} from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import registerBackground from '../../assets/image/bg.jpg'
 import { updateProfile } from "firebase/auth";
-
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
     const formRef = useRef(null);
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = e =>{
         e.preventDefault();
@@ -89,23 +90,25 @@ const Register = () => {
                 </div>
 
                 <div className="form-control">
-                <label className="label">
-                    <span className="label-text font-bold text-white">Password</span>
-                </label>
-                <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
-                <label className="label">
+                    <label className="label">
+                        <span className="label-text font-bold text-white">Password</span>
+                    </label>
+                    <div className="flex relative">
+                
+                        <input type={showPassword ? "text" : "password"} name="password" placeholder="password" className="input input-bordered w-full" required />
+
+                        <button type="button" className="absolute right-3 top-4" onClick={() => setShowPassword(!showPassword)} >
+                        {showPassword ? <FaEye /> : <FaEyeSlash />}
+                        </button>
+                    </div>
+                    <label className="label">
                     <a href="#" className="label-text-alt link link-hover font-bold text-white">Forgot password?</a>
-                </label>
+                    </label>
                 </div>
-
                 <div className="form-control mt-2">
-             
-             <button className="btn bg-black text-white font-bold">Register</button>
-
-            
-                
-                
+                <button className="btn bg-black text-white font-bold">Register</button>
                 </div>
+                
             </form>
             <p className="text-center text-white">Already have an account? Please <Link to="/login">
                 <button className="text-blue-400 underline font-bold">SignIn</button>

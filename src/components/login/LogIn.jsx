@@ -9,11 +9,12 @@ import app from "../../firebase/firebaseinfo.config";
 import registerBackground from '../../assets/image/bg.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const LogIn = () => {
   const {signInUser}=useContext(AuthContext)
   const formRef = useRef(null);
+  const [showPassword, setShowPassword] = useState(false);
 
 // google login start
 const [user,setUser] =useState(null);
@@ -65,6 +66,7 @@ const handleGithubLogIn = () =>{
     const email = form.get('email');
     const password = form.get('password');
     console.log(email,password);
+
     signInUser(email,password)
     .then(result =>{
         console.log(result.user);
@@ -102,7 +104,14 @@ const handleGithubLogIn = () =>{
               <label className="label">
                   <span className="label-text font-bold text-white">Password</span>
               </label>
-              <input type="password" name="password" placeholder="Enter Password" className="input input-bordered" required />
+              <div className="flex relative">
+            
+                    <input type={showPassword ? "text" : "password"} name="password" placeholder="password" className="input input-bordered w-full" required />
+
+                    <button type="button" className="absolute right-3 top-4" onClick={() => setShowPassword(!showPassword)} >
+                    {showPassword ? <FaEye /> : <FaEyeSlash />}
+                    </button>
+                </div>
               <label className="label">
                   <a href="#" className="label-text-alt link link-hover font-bold text-white">Forgot password?</a>
               </label>

@@ -2,6 +2,7 @@ import slider1 from '../../assets/image/slider1.jpg'
 import slider2 from '../../assets/image/slider2.jpg'
 import slider3 from '../../assets/image/slider3.jpg'
 import slider4 from '../../assets/image/slider4.jpg'
+import 'animate.css';
 const Banner = () => {
     return (
         <div className='relative'>
@@ -28,6 +29,7 @@ const Banner = () => {
                     </div>
                 </div> 
                 <div id="slide4" className="carousel-item relative w-full">
+                
                     <img src={slider2} className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" className="btn btn-circle">❮</a> 
@@ -35,7 +37,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-            <div className='absolute top-20 w-[50%] ml-20'>
+            <div className='absolute top-20 w-[50%] ml-20 animate__animated animate__backInLeft'>
                 <h1 className='text-[40px] w-[80%] p-10 bg-black bg-opacity-50 text-white rounded-xl'>Get the best real estate deals first,
                     before they hit the mass market!</h1>
 
