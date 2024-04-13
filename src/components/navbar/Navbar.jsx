@@ -35,7 +35,7 @@ const Navbar = () => {
     
     </>
     return (
-        <div className="navbar bg-base-100 mt-4 sticky top-0 z-50 container mx-auto">
+        <div className="navbar bg-base-100 mt-3 mb-1 sticky top-0 z-50 container mx-auto">
             <div className="navbar-start">
               <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -63,22 +63,22 @@ const Navbar = () => {
               {
                 user ?
                     <div className="flex gap-3">
-                        <div className="tooltip tooltip-hover tooltip-bottom"     data-tip="hello">
+                        <div className="tooltip tooltip-hover tooltip-top"     data-tip={user.displayName}>
                           <div className="w-10 h-10 rounded-full border border-black">
                         
-                            <img alt="Tailwind CSS Navbar component" src={logo} className="h-[80%] mx-auto" />
+                            <img alt="Tailwind CSS Navbar component" src={user.photoURL} className="h-full w-full mx-auto rounded-full" />
                           </div>
     
                         </div>
                   
                   
-                        <button onClick={handleSignOut} className="py-2 px-4 bg-black text-white rounded-xl">Sign Out</button>
+                        <button onClick={handleSignOut} className="py-2 px-4 border border-black text-black rounded-xl font-bold">Sign Out</button>
 
                     </div>
                 
 
                 :
-                    <div className="flex gap-5">
+                    <div className="flex gap-2">
                       <Link to='/login'><button className="py-2 px-4 bg-black text-white rounded-xl">Sign In</button></Link>
                     <Link to='register'><button className="py-2 px-4 bg-white rounded-xl text-black border border-black font-bold">Register</button></Link></div>
 

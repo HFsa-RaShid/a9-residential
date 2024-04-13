@@ -21,7 +21,8 @@ const [user,setUser] =useState(null);
     .then(result =>{
         const loggedInUser = result.user;
         console.log(loggedInUser);
-        setUser(loggedInUser)
+        setUser(loggedInUser);
+        window.location.href = "/";
     })
     .catch(error =>{
         console.log('error',error.message);
@@ -36,7 +37,8 @@ const handleGithubLogIn = () =>{
     .then(result =>{
         const loggedUser = result.user;
         console.log(loggedUser);
-        setUser(loggedUser)
+        setUser(loggedUser);
+        window.location.href = "/";
     })
     .catch(error =>{
         console.log('error',error.message);
@@ -55,6 +57,7 @@ const handleGithubLogIn = () =>{
     .then(result =>{
         console.log(result.user);
         formRef.current.reset();
+        window.location.href = "/";
     })
     .catch(error =>{
         console.error(error)
@@ -69,34 +72,34 @@ const handleGithubLogIn = () =>{
           
           <h1 className="text-5xl font-bold text-white">Sign In now!</h1>
           
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-70">
           <form className="card-body" onSubmit={handleLogin} ref={formRef}>
               <div className="form-control">
               <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text font-bold text-white">Email</span>
               </label>
               <input type="email" name="email" placeholder="Enter Email" className="input input-bordered" required />
               </div>
               <div className="form-control">
               <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text font-bold text-white">Password</span>
               </label>
               <input type="password" name="password" placeholder="Enter Password" className="input input-bordered" required />
               <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                  <a href="#" className="label-text-alt link link-hover font-bold text-white">Forgot password?</a>
               </label>
               </div>
               <div className="form-control mt-2">
               <button className="btn bg-black text-white font-bold">Sign In</button>
               </div>
-              <hr></hr>
-              <p className="text-center font-bold">OR</p>
+              
+              <p className="text-center font-bold text-white">OR</p>
               <div className="flex justify-around">
-                <div className="border flex py-2 px-3 rounded-xl gap-3 items-center w-[45%] pl-7">
+                <div className="border flex py-2 px-3 bg-black text-white rounded-xl gap-3 items-center w-[45%] pl-7">
                     <FcGoogle />
                     <button onClick={handleGoogleLogIn} className="font-bold text-[18px]">Google</button>
                 </div>
-                <div className="border flex py-2 px-3 rounded-xl gap-3 items-center w-[45%] pl-7">
+                <div className="border flex py-2 px-3 bg-black text-white rounded-xl gap-3 items-center w-[45%] pl-7">
                     <FaGithub />
                     <button onClick={handleGithubLogIn} className="font-bold text-[18px]">Github</button>
 
@@ -107,8 +110,8 @@ const handleGithubLogIn = () =>{
               
           </form>
           
-          <p className="text-center">New to Sweet Home? Please <Link to="/register">
-              <button className="text-blue-800 underline font-bold">Register</button>
+          <p className="text-center text-white">New to Sweet Home? Please <Link to="/register">
+              <button className="text-blue-400 underline font-bold">Register</button>
           </Link></p>
           </div>
           
