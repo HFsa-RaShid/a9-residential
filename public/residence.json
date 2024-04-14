@@ -1,0 +1,112 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Modern Townhouse in Suburban Neighborhood",
+      "segment_name": "Townhouse",
+      "description": "Beautifully designed townhouse with modern amenities and spacious rooms.",
+      "price": "$500,000",
+      "status": "Sale",
+      "area": "2,500 sq ft",
+      "location": "Suburban City, State",
+      "facilities": ["3 bedrooms", "2.5 bathrooms", "Open concept kitchen", "Backyard patio"],
+      "image": "https://i.ibb.co/CPz01zJ/Modern-Townhouse-in-Suburban-Neighborhood.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Luxury Apartment with City View",
+      "segment_name": "Apartment",
+      "description": "Luxurious apartment in a high-rise building with panoramic city views.",
+      "price": "$3,000/month",
+      "status": "Rent",
+      "area": "1,200 sq ft",
+      "location": "Downtown, City",
+      "facilities": ["1 bedroom", "1 bathroom", "Floor-to-ceiling windows", "Fitness center"],
+      "image": "https://i.ibb.co/pK9PxQv/Luxury-Apartment-with-City-View.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Charming Single-Family Home with Garden",
+      "segment_name": "Single-family home",
+      "description": "Cozy single-family home with a beautiful garden and outdoor seating area.",
+      "price": "$350,000",
+      "status": "Sale",
+      "area": "1,800 sq ft",
+      "location": "Quaint Suburb, State",
+      "facilities": ["3 bedrooms", "2 bathrooms", "Fireplace", "Backyard garden"],
+      "image": "https://i.ibb.co/qDP1qMH/Charming-Single-Family-Home-with-Garden.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Spacious Senior Living Community Apartment",
+      "segment_name": "Senior living community",
+      "description": "Comfortable apartment in a senior living community with various amenities and social activities.",
+      "price": "$2,500/month",
+      "status": "Rent",
+      "area": "900 sq ft",
+      "location": "Retirement Village, State",
+      "facilities": ["1 bedroom", "1 bathroom", "Community dining room", "Scheduled transportation"],
+      "image": "https://i.ibb.co/HzQcdNx/Spacious-Senior-Living-Community-Apartment.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Modern Condo with Ocean View",
+      "segment_name": "Condo",
+      "description": "Stylish condo located near the beach, offering breathtaking ocean views.",
+      "price": "$750,000",
+      "status": "Sale",
+      "area": "1,500 sq ft",
+      "location": "Beachfront, City",
+      "facilities": ["2 bedrooms", "2 bathrooms", "Balcony", "Fitness center"],
+      "image": "https://i.ibb.co/GC1YnTr/Modern-Condo-with-Ocean-View.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Cozy Vacation Rental Cottage",
+      "segment_name": "Vacation rental",
+      "description": "Quaint cottage perfect for a relaxing getaway, surrounded by nature.",
+      "price": "$200/night",
+      "status": "Rent",
+      "area": "800 sq ft",
+      "location": "Scenic Countryside, State",
+      "facilities": ["1 bedroom", "1 bathroom", "Outdoor deck", "Fire pit"],
+      "image": "https://i.ibb.co/8KxtQ9f/Cozy-Vacation-Rental-Cottage.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Student Housing Near Campus",
+      "segment_name": "Student housing",
+      "description": "Convenient student housing within walking distance of campus facilities.",
+      "price": "$1,200/month",
+      "status": "Rent",
+      "area": "700 sq ft",
+      "location": "College Town, State",
+      "facilities": ["Studio apartment", "Study area", "Laundry facilities", "Bike storage"],
+      "image": "https://i.ibb.co/tHmM21c/Student-Housing-Near-Campus.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Lakefront Cabin Retreat",
+      "segment_name": "Vacation rental",
+      "description": "Rustic cabin nestled by the lake, ideal for outdoor enthusiasts and nature lovers.",
+      "price": "$300/night",
+      "status": "Rent",
+      "area": "1,200 sq ft",
+      "location": "Lakeside, State",
+      "facilities": ["2 bedrooms", "1 bathroom", "Deck overlooking the lake", "Canoe rental"],
+      "image": "https://i.ibb.co/kS4qsgg/Lakefront-Cabin-Retreat.webp"
+    },
+    {
+        "id": 9,
+        "estate_title": "Contemporary Loft in Urban Setting",
+        "segment_name": "Apartment",
+        "description": "Modern loft-style apartment located in the heart of the city, featuring industrial design elements and city skyline views.",
+        "price": "$600,000",
+        "status": "Sale",
+        "area": "1,800 sq ft",
+        "location": "City Center, State",
+        "facilities": ["2 bedrooms", "2 bathrooms", "Exposed brick walls", "Roof deck"],
+        "image": "https://i.ibb.co/VMr1pGW/Contemporary-Loft-in-Urban-Setting.jpg"
+      }
+      
+  ]
+  

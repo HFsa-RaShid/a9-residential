@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import app from "../../firebase/firebaseinfo.config";
@@ -6,7 +6,6 @@ import { getAuth } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const UpdateProfile = () => {
-
     const {createUser} = useContext(AuthContext);
     const formRef = useRef(null);
     const auth = getAuth(app);
@@ -21,15 +20,16 @@ const UpdateProfile = () => {
         updateProfile(auth.currentUser,{
             displayName: name,
             photoURL: photoUrl,
-            
         })
         .then(() =>{
-            formRef.current.reset();
-            alert('Update successfully');
+            
+            
         })
         .catch(error => {
             console.error(error)
         })
+       
+        
 
         
     }
@@ -43,7 +43,7 @@ const UpdateProfile = () => {
                 <label className="label">
                     <span className="label-text font-bold ">Name</span>
                 </label>
-                <input type="text" name="name" placeholder="Your Name" className="input input-bordered"  />
+                <input type="text" name="name" placeholder="Your Name" className="input input-bordered" />
                 </div>
 
                 <div className="form-control">

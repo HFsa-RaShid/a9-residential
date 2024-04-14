@@ -3,10 +3,14 @@ import contactImg from '../../assets/image/c2-removebg-preview.png'
 import { NavLink } from "react-router-dom";
 import 'animate.css';
 import Service from "../service/Service";
+import EstateCards from "../estateCards/EstateCards";
+import Loan from "../loan/Loan";
 const Home = () => {
     return (
         <div className="container mx-auto mt-6">
             <Banner></Banner>
+            <EstateCards></EstateCards>
+            <Loan></Loan>
             <Service></Service>
             <div className="hero h-[600px] relative mb-10">
                 <div className="h-full w-full">

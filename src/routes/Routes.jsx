@@ -7,6 +7,9 @@ import UpdateProfile from "../components/updateProfile/UpdateProfile";
 import UserProfile from "../components/userProfile/UserProfile";
 import Register from "../components/register/Register";
 import ContactUs from "../components/contact/ContactUs";
+import Loan from "../components/loan/Loan";
+import LoanForm from "../components/loan/LoanForm";
+import CardDetails from "../components/card/CardDetails";
 
 export const router = createBrowserRouter([
     {
@@ -39,6 +42,16 @@ export const router = createBrowserRouter([
             path: "/register",
             element: <Register></Register>,
         },
+        {
+          path: "/card/:id",
+          element: <CardDetails></CardDetails>,
+          loader: ()=> fetch('../residence.json')
+        },
+        {
+          path: "/loan",
+          element: <LoanForm></LoanForm>,
+        }
+        
         
       ],
     },
