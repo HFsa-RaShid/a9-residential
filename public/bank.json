@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-      "image": "https://example.com/bank1.jpg",
+      "image": "https://i.ibb.co/RjRFCLL/dbh.jpg",
       "name": "DBH",
       "maximum_loan_amount": "$500,000",
       "interest_rate": "3.5%",
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-      "image": "https://example.com/bank2.jpg",
+      "image": "https://i.ibb.co/6rvcpww/images.png",
       "name": "City Bank",
       "maximum_loan_amount": "$600,000",
       "interest_rate": "3.2%",
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-      "image": "https://example.com/bank3.jpg",
+      "image": "https://i.ibb.co/5K2RpSd/standard-chartered-bank-new-20211713.jpg",
       "name": "Standard Chartered Bank",
       "maximum_loan_amount": "$450,000",
       "interest_rate": "3.8%",

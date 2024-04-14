@@ -11,7 +11,7 @@ const CardDetails = () => {
     const idInt = parseInt(id);
     const card=cards.find(card => card.id === idInt);
     return (
-        <div className="flex gap-20 h-[450px] mt-20 container mx-auto">
+        <div className="flex gap-20 h-[480px] mt-20 container mx-auto">
             <div className="md:w-[40%]">
                 <img src={card.image} />
 
@@ -25,6 +25,13 @@ const CardDetails = () => {
                 <p><span className="font-bold">Description: </span>{card.description}</p>
 
                 <div className="mt-4">
+                <div className="flex mb-2">
+                        <div className="flex items-center gap-2 w-[15%]">
+                        <FaSackDollar />
+                        <p className="font-bold">ID: </p>
+                        </div>
+                        <p>{card.id}</p>
+                    </div>
                     <div className="flex mb-2">
                         <div className="flex items-center gap-2 w-[15%]">
                         <MdSell />
@@ -67,7 +74,7 @@ const CardDetails = () => {
                             ))}
                         </div>
                     </div>
-                <NavLink to='/'><button className="bg-black text-white py-2 px-6 mt-10 rounded-2xl">Go Back Home</button></NavLink>
+                <NavLink to='/'><button className="bg-black text-white py-2 px-6 mt-5 mb-5 rounded-2xl">Go Back Home</button></NavLink>
 
             </div>
             
