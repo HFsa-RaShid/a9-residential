@@ -1,11 +1,17 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const UserProfile = () => {
     const {user} = useContext(AuthContext);
+
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
+
     return (
-        <div >
+        <div data-aos = "fade-up">
             <h1 className="text-center text-[30px] font-bold mt-5">User's Profile!!!</h1>
             <div className="flex container mx-auto md:w-[60%] border h-[300px] mt-5 mb-10 gap-10">
                 <div className="w-[30%]">

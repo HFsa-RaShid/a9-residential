@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import registerBackground from '../../assets/image/bg.jpg'
 import { updateProfile } from "firebase/auth";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-
+import 'animate.css';
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
@@ -62,7 +62,7 @@ const Register = () => {
     return (
         <div className="hero min-h-[571px]" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${registerBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
        
-        <div className="hero-content flex-col w-[500px]">
+        <div className="hero-content flex-col w-[500px] animate__animated animate__zoomIn ">
             
             <h1 className="text-4xl font-bold text-white">Register Here!</h1>
             

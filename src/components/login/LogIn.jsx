@@ -10,7 +10,7 @@ import registerBackground from '../../assets/image/bg.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-
+import 'animate.css';
 
 
 
@@ -96,7 +96,7 @@ const handleGithubLogIn = () =>{
           
           <h1 className="text-5xl font-bold text-white">Sign In now!</h1>
           
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-70">
+          <div className="card animate__animated animate__zoomIn shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-70">
           <form className="card-body" onSubmit={handleLogin} >
               <div className="form-control">
               <label className="label">

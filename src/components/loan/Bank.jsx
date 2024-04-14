@@ -1,9 +1,16 @@
-import React from 'react';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Bank = ({bank}) => {
     const {id,image,name,maximum_loan_amount,interest_rate,tenure} = bank;
+
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
+
     return (
-        <div className="card  bg-base-100 shadow-xl mb-10">
+        <div className="card  bg-base-100 shadow-xl mb-10" data-aos = "fade-up">
             <figure><img src={image} className='h-[150px]' /></figure>
             <div className="card-body">
                 <h2 className="card-title font-bold">{name}</h2>

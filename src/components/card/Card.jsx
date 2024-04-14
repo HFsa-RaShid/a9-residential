@@ -3,11 +3,19 @@ import { FaSackDollar } from "react-icons/fa6";
 import { MdSell } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Card = ({card}) => {
     const {id,estate_title,segment_name,price,status,image,location} = card;
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
+
     return (
         
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl" data-aos = "fade-up">
                 <figure className="px-10 pt-10">
                     <img src={image} className="rounded-2xl w-full h-[180px]"/>
                 </figure>

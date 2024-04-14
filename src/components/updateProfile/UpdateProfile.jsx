@@ -1,14 +1,22 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import app from "../../firebase/firebaseinfo.config";
 import { getAuth } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const UpdateProfile = () => {
+
     const {createUser} = useContext(AuthContext);
     const formRef = useRef(null);
     const auth = getAuth(app);
+
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
 
     const handleUpdate = e =>{
         e.preventDefault();
@@ -33,7 +41,7 @@ const UpdateProfile = () => {
 
 
     return (
-        <div className="w-[50%] container mx-auto mt-10 mb-10 border p-10">
+        <div className="w-[50%] container mx-auto mt-10 mb-10 border p-10" data-aos = "fade-up">
             <h1 className="text-center text-[30px] font-bold">Update Your Profile!!!</h1>
             <form onClick={handleUpdate}>
                 <div className="form-control">

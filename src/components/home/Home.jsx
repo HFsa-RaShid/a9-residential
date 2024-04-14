@@ -1,24 +1,31 @@
 import Banner from "../banner/Banner";
 import contactImg from '../../assets/image/c2-removebg-preview.png'
 import { NavLink } from "react-router-dom";
-import 'animate.css';
-import Service from "../service/Service";
 import EstateCards from "../estateCards/EstateCards";
 import Loan from "../loan/Loan";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Home = () => {
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
+
     return (
-        <div className="container mx-auto mt-6">
+        
+        <div className="container mx-auto mt-6 ">
             <Banner></Banner>
             <EstateCards></EstateCards>
             <Loan></Loan>
-            
-            <div className="hero h-[600px] relative mb-10">
+
+            <div className="hero h-[600px] relative mb-10" data-aos = "fade-up">
                 <div className="h-full w-full">
                     <div className="h-[200px]">
 
                     </div>
-                    <div className=" h-[400px] w-[80%] rounded-2xl relative bg-[#79BBBC]">
-                        <div className="w-[50%] absolute top-10 left-10 animate__animated animate__fadeInUp">
+                    <div className=" h-[400px] w-[80%] rounded-2xl relative bg-[#79BBBC]" >
+                        <div className="w-[50%] absolute top-10 left-10 " data-aos = "fade-down">
                             <h1 className="text-white text-[40px]  font-bold ">
                             Would you like to live in Sweet Homes?
 
@@ -44,7 +51,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <img className="animate__animated animate__fadeInUp h-full absolute right-0" src={contactImg} alt="" />
+                <img className=" h-full absolute right-0" data-aos = "fade-up" src={contactImg} alt="" />
 
             </div>
 

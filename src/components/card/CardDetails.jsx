@@ -4,19 +4,28 @@ import { MdSell } from "react-icons/md";
 import { FaChartArea } from "react-icons/fa";
 import { FaSackDollar } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const CardDetails = () => {
     const cards = useLoaderData();
     const {id} = useParams();
     const idInt = parseInt(id);
     const card=cards.find(card => card.id === idInt);
+
+
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
+
     return (
-        <div className="flex gap-20 h-[480px] mt-20 container mx-auto">
-            <div className="md:w-[40%]">
+        <div className="flex gap-20 h-[480px] mt-20 container mx-auto" >
+            <div className="md:w-[40%]" data-aos = "fade-down">
                 <img src={card.image} />
 
             </div>
-            <div className="md:w-[60%]">
+            <div className="md:w-[60%]" data-aos = "fade-up">
                 <h1 className="text-[30px]">{card.estate_title}</h1>
                 <div className="flex items-center gap-2 text-[20px] mb-3">
                         <ImHome />
