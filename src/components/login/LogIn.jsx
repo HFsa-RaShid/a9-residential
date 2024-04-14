@@ -1,6 +1,6 @@
-import { useContext, useRef, useState } from "react";
+import { useContext,  useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
@@ -11,24 +11,29 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
-const LogIn = () => {
-  const {signInUser}=useContext(AuthContext)
-  const formRef = useRef(null);
-  const [showPassword, setShowPassword] = useState(false);
 
-// google login start
-const [user,setUser] =useState(null);
-  const auth = getAuth(app);
-  const googleProvider = new GoogleAuthProvider();
-  const handleGoogleLogIn =() =>{
-    signInWithPopup(auth,googleProvider)
-    .then(result =>{
+
+
+const LogIn = () => {
+
+            const {signInUser}=useContext(AuthContext)
+            const [showPassword, setShowPassword] = useState(false);
+            const location = useLocation();
+            const navigate = useNavigate();
+
+        // google login start
+        const [user,setUser] =useState(null);
+        const auth = getAuth(app);
+        const googleProvider = new GoogleAuthProvider();
+        const handleGoogleLogIn =() =>{
+        signInWithPopup(auth,googleProvider)
+        .then(result =>{
         const loggedInUser = result.user;
         console.log(loggedInUser);
         setUser(loggedInUser);
         toast.success('Logged In successfully');
         setTimeout(() => {
-            window.location.href = "/";
+            navigate(location?.state ? location.state : '/')
         }, 1000);
         
     })
@@ -49,7 +54,7 @@ const handleGithubLogIn = () =>{
         setUser(loggedUser);
         toast.success('Logged In successfully');
         setTimeout(() => {
-            window.location.href = "/";
+            navigate(location?.state ? location.state : '/')
         }, 1000);
     })
     .catch(error =>{
@@ -70,10 +75,9 @@ const handleGithubLogIn = () =>{
     signInUser(email,password)
     .then(result =>{
         console.log(result.user);
-        formRef.current.reset();
         toast.success('Logged In successfully');
         setTimeout(() => {
-            window.location.href = "/";
+            navigate(location?.state ? location.state : '/')
         }, 1000);
         
     })
@@ -93,7 +97,7 @@ const handleGithubLogIn = () =>{
           <h1 className="text-5xl font-bold text-white">Sign In now!</h1>
           
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-70">
-          <form className="card-body" onSubmit={handleLogin} ref={formRef}>
+          <form className="card-body" onSubmit={handleLogin} >
               <div className="form-control">
               <label className="label">
                   <span className="label-text font-bold text-white">Email</span>

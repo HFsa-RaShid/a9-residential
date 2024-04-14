@@ -11,6 +11,7 @@ import Loan from "../components/loan/Loan";
 import LoanForm from "../components/loan/LoanForm";
 import CardDetails from "../components/card/CardDetails";
 import Banks from "../components/loan/Banks";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -45,7 +46,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "/card/:id",
-          element: <CardDetails></CardDetails>,
+          element: <PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
           loader: ()=> fetch('../residence.json')
         },
         {

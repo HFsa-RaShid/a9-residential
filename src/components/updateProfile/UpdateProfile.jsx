@@ -29,9 +29,6 @@ const UpdateProfile = () => {
             console.error(error)
         })
        
-        
-
-        
     }
 
 

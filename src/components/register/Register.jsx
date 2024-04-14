@@ -1,5 +1,5 @@
-import { useContext, useRef, useState} from "react";
-import { Link} from "react-router-dom";
+import { useContext, useState} from "react";
+import { Link, useLocation, useNavigate} from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,8 +10,9 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
-    const formRef = useRef(null);
     const [showPassword, setShowPassword] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleRegister = e =>{
         e.preventDefault();
@@ -49,10 +50,9 @@ const Register = () => {
                 console.error(error)
             })
 
-            formRef.current.reset();
             toast.success('Registered successfully');
             setTimeout(() => {
-            window.location.href = "/"; 
+                navigate(location?.state ? location.state : '/')
             }, 1000);
         })
         .catch(error => {
@@ -67,7 +67,7 @@ const Register = () => {
             <h1 className="text-4xl font-bold text-white">Register Here!</h1>
             
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-70">
-            <form className="card-body " onSubmit={handleRegister} ref={formRef}>
+            <form className="card-body " onSubmit={handleRegister} >
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text font-bold text-white">Name</span>
