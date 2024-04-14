@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+      "image": "https://example.com/bank1.jpg",
+      "name": "DBH",
+      "maximum_loan_amount": "$500,000",
+      "interest_rate": "3.5%",
+      "tenure": "25 years"
+    },
+    {
+        "id": 2,
+      "image": "https://example.com/bank2.jpg",
+      "name": "City Bank",
+      "maximum_loan_amount": "$600,000",
+      "interest_rate": "3.2%",
+      "tenure": "30 years"
+    },
+    {
+        "id": 3,
+      "image": "https://example.com/bank3.jpg",
+      "name": "Standard Chartered Bank",
+      "maximum_loan_amount": "$450,000",
+      "interest_rate": "3.8%",
+      "tenure": "20 years"
+    }
+  ]
+  

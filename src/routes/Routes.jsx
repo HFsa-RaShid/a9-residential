@@ -10,6 +10,7 @@ import ContactUs from "../components/contact/ContactUs";
 import Loan from "../components/loan/Loan";
 import LoanForm from "../components/loan/LoanForm";
 import CardDetails from "../components/card/CardDetails";
+import Banks from "../components/loan/Banks";
 
 export const router = createBrowserRouter([
     {
@@ -50,7 +51,12 @@ export const router = createBrowserRouter([
         {
           path: "/loan",
           element: <LoanForm></LoanForm>,
+        },
+        {
+          path: "/banks",
+          element: <Banks></Banks>,
         }
+
         
         
       ],

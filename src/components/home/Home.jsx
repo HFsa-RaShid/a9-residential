@@ -11,7 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <EstateCards></EstateCards>
             <Loan></Loan>
-            <Service></Service>
+            
             <div className="hero h-[600px] relative mb-10">
                 <div className="h-full w-full">
                     <div className="h-[200px]">
