@@ -18,7 +18,6 @@ const ContactUs = () => {
                 <div className="flex gap-7 items-center text-[18px]">
                     <FaPhoneAlt />
                     <p>(880)1734528340</p>
-
                 </div >
                 <div className="flex gap-7 items-center text-[18px]">
                     <MdEmail />

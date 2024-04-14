@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "/contact",
-          element: <ContactUs></ContactUs>,
+          element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>,
         },
         {
             path: "/login",
@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "/loan",
-          element: <LoanForm></LoanForm>,
+          element: <PrivateRoute><LoanForm></LoanForm></PrivateRoute>,
         },
         {
           path: "/banks",
