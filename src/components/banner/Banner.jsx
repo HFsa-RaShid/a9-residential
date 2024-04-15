@@ -4,56 +4,59 @@ import slider2 from '../../assets/image/slider2.jpg'
 import slider3 from '../../assets/image/slider3.jpg'
 import slider4 from '../../assets/image/slider4.jpg'
 
+import { A11y, Autoplay} from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const Banner = () => {
 
-    // const slider1 = "https://ibb.co/Lp0p7zG";
-    // const slider2 = "https://ibb.co/Lp0p7zG";
-    // const slider3 = "https://ibb.co/Lp0p7zG";
-    // const slider4 = "https://ibb.co/Lp0p7zG";
-   
-   
-
     return (
-        <div className='relative '>
-            <div className="carousel w-full h-[520px]  mb-8 rounded-2xl">
-                <div id="slide1" className="carousel-item relative w-full">
-                    <img src={slider4} className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" className="btn btn-circle">❮</a> 
-                    <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide2" className="carousel-item relative w-full">
-                    <img src={slider2} className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a> 
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide3" className="carousel-item relative w-full">
-                    <img src={slider3} className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a> 
-                    <a href="#slide4" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide4" className="carousel-item relative w-full">
-                
-                    <img src={slider1} className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" className="btn btn-circle">❮</a> 
-                    <a href="#slide1" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-            </div>
-            <div className='absolute top-20 w-[50%] ml-20 '>
-                <h1 className='text-[40px] w-[80%] p-10 bg-black bg-opacity-50 text-white rounded-xl'>Get the best real estate deals first,
-                    before they hit the mass market!</h1>
-
-            </div>
-        </div>
         
+        <Swiper
+        modules={[  A11y, Autoplay]} 
+        spaceBetween={50}
+        slidesPerView={1}
+        autoplay={{ delay: 2500 }} 
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+      >
+        <SwiperSlide  style={{ height: "500px" }}>
+        <div className=" absolute top-[45%] w-[800px] rounded-xl left-[23%] bg-black opacity-50 px-8 py-5">
+                <h1 className="text-white text-2xl lg:text-[36px] mb-10 font-bold text-center">Get the best real estate deals first,
+                    </h1>
+                    <h1 className="text-white text-2xl lg:text-[36px]  font-bold text-center">before they hit the mass market!</h1>
+                    
+                </div>
+            <img src={slider4} alt="Slide 1" /></SwiperSlide>
+        <SwiperSlide  style={{ height: "500px" }}>
+        <div className=" absolute top-[45%] w-[800px] rounded-xl left-[23%] bg-black opacity-50 px-8 py-5 ">
+                <h1 className="text-white text-2xl lg:text-[36px] mb-10 font-bold text-center">Get the best real estate deals first,
+                    </h1>
+                    <h1 className="text-white text-2xl lg:text-[36px]  font-bold text-center">before they hit the mass market!</h1>
+                    
+                </div>
+            <img src={slider2} alt="Slide 2" /></SwiperSlide>
+        <SwiperSlide  style={{ height: "500px" }}>
+        <div className=" absolute top-[45%] w-[800px] rounded-xl left-[23%] bg-black opacity-50 px-8 py-5 ">
+                <h1 className="text-white text-2xl lg:text-[36px] mb-10 font-bold text-center">Get the best real estate deals first,
+                    </h1>
+                    <h1 className="text-white text-2xl lg:text-[36px]  font-bold text-center">before they hit the mass market!</h1>
+                    
+                </div>
+            <img src={slider3} alt="Slide 3" /></SwiperSlide>
+        <SwiperSlide  style={{ height: "500px" }}>
+        <div className=" absolute top-[45%] w-[800px] rounded-xl left-[23%] bg-black opacity-50 px-8 py-5">
+                <h1 className="text-white text-2xl lg:text-[36px] mb-10 font-bold text-center">Get the best real estate deals first,
+                    </h1>
+                    <h1 className="text-white text-2xl lg:text-[36px]  font-bold text-center">before they hit the mass market!</h1>
+                    
+                </div>
+            <img src={slider1} alt="Slide 3" /></SwiperSlide>
+      </Swiper>
+     
     );
 };
 

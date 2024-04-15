@@ -12,17 +12,19 @@ import LoanForm from "../components/loan/LoanForm";
 import CardDetails from "../components/card/CardDetails";
 import Banks from "../components/loan/Banks";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../components/errorPage/ErrorPage";
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
-  
+      errorElement: <ErrorPage></ErrorPage>,
       
       children: [
         {
           path: "/",
           element: <Home></Home>,
+          
         },
         {
             path: "/updateProfile",

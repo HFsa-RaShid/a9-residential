@@ -10,8 +10,8 @@ const EstateCards = () => {
         .then(data => setCards(data))
     },[])
     return (
-        <div className="mx-5 lg:mx-20">
-            <h1  className="mb-10 mt-10 text-[35px] text-center">REAL ESTATE LISTINGS</h1>
+        <div className=" lg:mx-20">
+            <h1  className="mb-10 md:mt-10 text-[35px] text-center">REAL ESTATE LISTINGS</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     cards.map(card => <Card key={card.id} card={card}></Card>)
