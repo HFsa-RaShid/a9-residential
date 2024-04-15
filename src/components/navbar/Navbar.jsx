@@ -28,7 +28,8 @@ const Navbar = () => {
       :
       <div className="flex font-semibold text-[18px] animate__animated animate__fadeInDown">
         <li><NavLink to='/'>Home</NavLink></li>
-      <li> <NavLink to='/contact'>Contact Us</NavLink></li>
+        <li><NavLink to='/userProfile'>User Profile</NavLink></li>
+       <li><NavLink to='/contact'>Contact Us</NavLink></li>
       </div>
     }
     

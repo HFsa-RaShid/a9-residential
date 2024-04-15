@@ -1,8 +1,12 @@
 
 import 'animate.css';
+import { Helmet } from 'react-helmet';
 const LoanForm = () => {
     return (
         <div className="hero  bg-base-200 ">
+            <Helmet>
+                <title>Apply Loan- Sweet Home</title>
+            </Helmet>
             <div className="hero-content flex-col  w-[400px] animate__animated animate__zoomIn">
             <h1 className="text-4xl font-bold ">Apply for Loan!</h1>
                     <div className="card shrink-0  w-full max-w-sm  shadow-2xl bg-base-100">

@@ -7,8 +7,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
+    
 
     const {createUser} = useContext(AuthContext);
     const formRef = useRef(null);
@@ -42,6 +44,10 @@ const UpdateProfile = () => {
 
     return (
         <div className="w-[50%] container mx-auto mt-10 mb-10 border p-10" data-aos = "fade-up">
+            
+            <Helmet>
+                <title>Update Profile- Sweet Home</title>
+            </Helmet>
             <h1 className="text-center text-[30px] font-bold">Update Your Profile!!!</h1>
             <form onClick={handleUpdate}>
                 <div className="form-control">

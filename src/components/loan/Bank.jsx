@@ -2,6 +2,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 const Bank = ({bank}) => {
     const {id,image,name,maximum_loan_amount,interest_rate,tenure} = bank;
 
@@ -11,6 +12,10 @@ const Bank = ({bank}) => {
 
     return (
         <div className="card  bg-base-100 shadow-xl mb-10" data-aos = "fade-up">
+            <Helmet>
+                <title>Banks for Loan- Sweet Home</title>
+            </Helmet>
+            
             <figure><img src={image} className='h-[150px]' /></figure>
             <div className="card-body">
                 <h2 className="card-title font-bold">{name}</h2>

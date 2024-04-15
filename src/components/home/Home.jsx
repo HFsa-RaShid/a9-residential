@@ -6,6 +6,7 @@ import Loan from "../loan/Loan";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     useEffect(() => {
@@ -15,6 +16,9 @@ const Home = () => {
     return (
         
         <div className="container mx-auto mt-6 ">
+             <Helmet>
+                <title>Home- Sweet Home</title>
+            </Helmet>
             <Banner></Banner>
             <EstateCards></EstateCards>
             <Loan></Loan>
@@ -38,7 +42,7 @@ const Home = () => {
                                 </div>
                                 <div>
                                     <p>HEADQUARTER</p>
-                                    <p>112 Nuzrul Lane,Uttra,dhaka-1230</p>
+                                    <p>University of Barishal, Barishal-8254</p>
                                 </div>
 
                             </div>

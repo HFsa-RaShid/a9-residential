@@ -11,10 +11,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import 'animate.css';
+import { Helmet } from "react-helmet";
 
 
 
 const LogIn = () => {
+
+            
 
             const {signInUser}=useContext(AuthContext)
             const [showPassword, setShowPassword] = useState(false);
@@ -92,7 +95,12 @@ const handleGithubLogIn = () =>{
 
     return (
       <div className="hero max-h-screen" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${registerBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="hero-content flex-col w-[500px] ">
+        <Helmet>
+                <title>Sign In- Sweet Home</title>
+            </Helmet>
+        
+        
+        <div className="hero-content flex-col w-[500px] ">
           
           <h1 className="text-5xl font-bold text-white">Sign In now!</h1>
           

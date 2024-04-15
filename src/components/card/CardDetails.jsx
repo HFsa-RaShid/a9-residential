@@ -7,6 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const CardDetails = () => {
     const cards = useLoaderData();
@@ -21,6 +22,9 @@ const CardDetails = () => {
 
     return (
         <div className="flex gap-20 h-[480px] mt-20 container mx-auto" >
+            <Helmet>
+                <title>Card Details- Sweet Home</title>
+            </Helmet>
             <div className="md:w-[40%]" data-aos = "fade-down">
                 <img src={card.image} />
 

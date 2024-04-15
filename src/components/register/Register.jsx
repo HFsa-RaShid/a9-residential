@@ -7,8 +7,11 @@ import registerBackground from '../../assets/image/bg.jpg'
 import { updateProfile } from "firebase/auth";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import 'animate.css';
+import { Helmet } from "react-helmet";
 
 const Register = () => {
+        
+
     const {createUser} = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const location = useLocation();
@@ -61,60 +64,65 @@ const Register = () => {
     }
     return (
         <div className="hero min-h-[571px]" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${registerBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-       
-        <div className="hero-content flex-col w-[500px] animate__animated animate__zoomIn ">
+        
+        <Helmet>
+                <title>Register- Sweet Home</title>
+        </Helmet>
+
+            <div className="hero-content flex-col w-[500px] animate__animated animate__zoomIn ">
             
-            <h1 className="text-4xl font-bold text-white">Register Here!</h1>
+                <h1 className="text-4xl font-bold text-white">Register Here!</h1>
             
-            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-70">
-            <form className="card-body " onSubmit={handleRegister} >
-                <div className="form-control">
-                <label className="label">
-                    <span className="label-text font-bold text-white">Name</span>
-                </label>
-                <input type="text" name="name" placeholder="Your Name" className="input input-bordered" required />
-                </div>
+                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-70">
+                    <form className="card-body " onSubmit={handleRegister} >
+                        <div className="form-control">
+                            <label className="label">
+                                 <span className="label-text font-bold text-white">Name</span>
+                            </label>
+                            <input type="text" name="name" placeholder="Your Name" className="input input-bordered" required />
+                        </div>
 
-                <div className="form-control">
-                <label className="label">
-                    <span className="label-text font-bold text-white">Email</span>
-                </label>
-                <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
-                </div>
+                        <div className="form-control">
+                        <label className="label">
+                            <span className="label-text font-bold text-white">Email</span>
+                        </label>
+                        <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
+                        </div>
 
-                <div className="form-control">
-                <label className="label">
-                    <span className="label-text font-bold text-white">Photo URL</span>
-                </label>
-                <input type="text" name="photoUrl" placeholder="Enter Photo URL" className="input input-bordered" required />
-                </div>
+                        <div className="form-control">
+                        <label className="label">
+                            <span className="label-text font-bold text-white">Photo URL</span>
+                        </label>
+                        <input type="text" name="photoUrl" placeholder="Enter Photo URL" className="input input-bordered" required />
+                        </div>
 
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text font-bold text-white">Password</span>
-                    </label>
-                    <div className="flex relative">
+                        <div className="form-control">
+                        <label className="label">
+                            <span className="label-text font-bold text-white">Password</span>
+                        </label>
+                        <div className="flex relative">
+                    
+                            <input type={showPassword ? "text" : "password"} name="password" placeholder="password" className="input input-bordered w-full" required />
+
+                            <button type="button" className="absolute right-3 top-4" onClick={() => setShowPassword(!showPassword)} >
+                            {showPassword ? <FaEye /> : <FaEyeSlash />}
+                            </button>
+                        </div>
+                            <label className="label">
+                            <a href="#" className="label-text-alt link link-hover font-bold text-white">Forgot password?</a>
+                            </label>
+                        </div>
+                        <div className="form-control mt-2">
+                        <button className="btn bg-black text-white font-bold">Register</button>
+                        </div>
                 
-                        <input type={showPassword ? "text" : "password"} name="password" placeholder="password" className="input input-bordered w-full" required />
-
-                        <button type="button" className="absolute right-3 top-4" onClick={() => setShowPassword(!showPassword)} >
-                        {showPassword ? <FaEye /> : <FaEyeSlash />}
-                        </button>
-                    </div>
-                    <label className="label">
-                    <a href="#" className="label-text-alt link link-hover font-bold text-white">Forgot password?</a>
-                    </label>
+            
+                    </form>
+                    <p className="text-center text-white">Already have an account? Please <Link to="/login">
+                        <button className="text-blue-400 underline font-bold">SignIn</button>
+                    </Link></p>
                 </div>
-                <div className="form-control mt-2">
-                <button className="btn bg-black text-white font-bold">Register</button>
-                </div>
-                
-            </form>
-            <p className="text-center text-white">Already have an account? Please <Link to="/login">
-                <button className="text-blue-400 underline font-bold">SignIn</button>
-            </Link></p>
             </div>
-        </div>
         <ToastContainer />
        
     </div>
