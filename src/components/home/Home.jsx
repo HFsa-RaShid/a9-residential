@@ -17,7 +17,7 @@ const Home = () => {
         
         <div className="container mx-auto mt-6 ">
              <Helmet>
-                <title>Home- Sweet Home</title>
+                <title>Home | Sweet Home</title>
             </Helmet>
             <Banner></Banner>
             <EstateCards></EstateCards>
@@ -30,23 +30,23 @@ const Home = () => {
                     </div>
                     <div className=" h-[400px] w-[80%] rounded-2xl relative bg-[#79BBBC]" >
                         <div className="w-[50%] absolute top-10 left-10 " data-aos = "fade-down">
-                            <h1 className="text-white text-[40px]  font-bold ">
+                            <h1 className="text-white text-[23px] md:text-[30px] lg:text-[40px]  font-bold ">
                             Would you like to live in Sweet Homes?
 
                              </h1>
-                            <div className="flex justify-between text-white mt-6">
-                                <div>
+                            <div className="md:flex justify-between gap-5 text-white mt-6">
+                                <div className="mb-3">
                                     <p>NUMBER</p>
                                     <p>(880)1734528340</p>
 
                                 </div>
-                                <div>
+                                <div >
                                     <p>HEADQUARTER</p>
                                     <p>University of Barishal, Barishal-8254</p>
                                 </div>
 
                             </div>
-                            <div className=" mt-16">
+                            <div className="mt-4 md:mt-6 lg:mt-8">
                                 <NavLink to="/contact"><button className="py-2 px-5 text-white bg-[#2B4848] rounded-2xl text-[18px]">Contact Us</button></NavLink>
                             </div>
                         
@@ -55,7 +55,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <img className=" h-full absolute right-0" data-aos = "fade-up" src={contactImg} alt="" />
+                <img className="w-[40%] md:w-[50%] h-full absolute right-0" data-aos = "fade-up" src={contactImg} alt="" />
 
             </div>
 

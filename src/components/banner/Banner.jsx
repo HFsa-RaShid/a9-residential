@@ -12,6 +12,7 @@ const Banner = () => {
     // const slider3 = "https://ibb.co/Lp0p7zG";
     // const slider4 = "https://ibb.co/Lp0p7zG";
    
+   
 
     return (
         <div className='relative '>

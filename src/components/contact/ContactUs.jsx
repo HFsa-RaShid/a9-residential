@@ -15,15 +15,15 @@ const ContactUs = () => {
     }, []);
 
     return (
-        <div className="flex gap-28 container mx-auto h-[900px] mt-10">
+        <div className="lg:flex  lg:gap-28 container mx-auto h-[1600px] lg:h-[900px] mt-10 px-10">
             <Helmet>
-                <title>Contact Us- Sweet Home</title>
+                <title>Contact Us | Sweet Home</title>
             </Helmet>
-            <div className="md:w-[30%] rounded-2xl " data-aos = "fade-down">
+            <div className="w-full lg:w-[40%] rounded-2xl " data-aos = "fade-down">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.836846021132!2d90.35953117435601!3d22.65987092976782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755348ec0558363%3A0x71825eb40c8459a6!2sUniversity%20of%20Barishal!5e0!3m2!1sen!2sbd!4v1713001477250!5m2!1sen!2sbd" width="400" height="600"  allowFullscreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
-            <div data-aos = "fade-up">
+            <div data-aos = "fade-up" className="lg:w-[60%]">
                 <h1 className="text-[40px] font-bold mb-3">Get in Touch</h1>
                 <p className="text-[18px] mb-10">Have a question, feedback, or just want to say hello? We'd love to hear from you! Feel free to reach out to us using the form below or through any of the contact methods listed. Our team is ready to assist you and will get back to you as soon as possible.</p>
 

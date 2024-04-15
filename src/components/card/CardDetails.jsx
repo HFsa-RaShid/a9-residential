@@ -21,53 +21,53 @@ const CardDetails = () => {
     }, []);
 
     return (
-        <div className="flex gap-20 h-[480px] mt-20 container mx-auto" >
+        <div className="md:flex gap-20 h-[850px] md:h-[550px] lg:h-[520px] px-5 md:px-10 lg:px-5 mt-20 container mx-auto" >
             <Helmet>
-                <title>Card Details- Sweet Home</title>
+                <title>Card Details: {id}| Sweet Home</title>
             </Helmet>
             <div className="md:w-[40%]" data-aos = "fade-down">
                 <img src={card.image} />
 
             </div>
-            <div className="md:w-[60%]" data-aos = "fade-up">
-                <h1 className="text-[30px]">{card.estate_title}</h1>
+            <div className="md:w-[60%] mt-4 md:mt-0" data-aos = "fade-up">
+                <h1 className="text-[30px] font-bold">{card.estate_title}</h1>
                 <div className="flex items-center gap-2 text-[20px] mb-3">
                         <ImHome />
                         <p>{card.segment_name}</p>
                 </div>
-                <p><span className="font-bold">Description: </span>{card.description}</p>
+                <p><span className="font-bold text-[20px]">Description: </span>{card.description}</p>
 
                 <div className="mt-4">
                 <div className="flex mb-2">
-                        <div className="flex items-center gap-2 w-[15%]">
+                        <div className="flex items-center gap-2 w-[30%]">
                         <FaSackDollar />
                         <p className="font-bold">ID: </p>
                         </div>
                         <p>{card.id}</p>
                     </div>
                     <div className="flex mb-2">
-                        <div className="flex items-center gap-2 w-[15%]">
+                        <div className="flex items-center gap-2 w-[30%]">
                         <MdSell />
                         <p className="font-bold">Status:</p>
                         </div>
                         <p>{card.status}</p>
                     </div>
                     <div className="flex mb-2">
-                        <div className="flex items-center gap-2 w-[15%]">
+                        <div className="flex items-center gap-2 w-[30%]">
                         <FaChartArea />
                         <p className="font-bold">Area: </p>
                         </div>
                         <p>{card.area}</p>
                     </div>
                     <div className="flex mb-2">
-                        <div className="flex items-center gap-2 w-[15%]">
+                        <div className="flex items-center gap-2 w-[30%]">
                         <FaLocationDot />
                         <p className="font-bold">Location: </p>
                         </div>
                         <p>{card.location}</p>
                     </div>
                     <div className="flex mb-2">
-                        <div className="flex items-center gap-2 w-[15%]">
+                        <div className="flex items-center gap-2 w-[30%]">
                         <FaSackDollar />
                         <p className="font-bold">Price: </p>
                         </div>
@@ -77,7 +77,7 @@ const CardDetails = () => {
                 </div>
 
                 <div className=" flex">
-                        <div className="flex w-[15%]  gap-2">
+                        <div className="flex w-[30%]  gap-2">
                             <FaSackDollar />
                             <p className="font-bold">Facilities: </p>
                         </div>

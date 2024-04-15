@@ -12,7 +12,7 @@ const Banks = () => {
     return (
         <div className="mx-5 lg:mx-20">
             <h1  className="mb-10 mt-10 text-[35px] text-center font-bold">Banks</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     banks.map(bank => <Bank key={bank.id} bank={bank}></Bank>)
                 }
