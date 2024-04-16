@@ -50,6 +50,8 @@ const UpdateProfile = () => {
                 <title>Update Profile | Sweet Home</title>
             </Helmet>
             <h1 className="text-center text-[30px] font-bold">Update Your Profile!!!</h1>
+            <p className="text-center">{user.email}</p>
+            
             <form onClick={handleUpdate}>
                 <div className="form-control">
                 <label className="label">
@@ -57,13 +59,6 @@ const UpdateProfile = () => {
                 </label>
                 <input type="text" name="name" placeholder={user.displayName} className="input input-bordered" required />
                 </div>
-                <div className="form-control">
-                <label className="label">
-                    <span className="label-text font-bold ">Email</span>
-                </label>
-                <input type="email" name="name" placeholder={user.email} className="input input-bordered"  />
-                </div>
-
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text font-bold ">Photo URL</span>
