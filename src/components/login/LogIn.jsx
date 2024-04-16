@@ -94,7 +94,7 @@ const handleGithubLogIn = () =>{
 
 
     return (
-      <div className="hero max-h-screen" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${registerBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="hero " style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${registerBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <Helmet>
                 <title>Sign In | Sweet Home</title>
             </Helmet>
