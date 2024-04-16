@@ -69,7 +69,7 @@ const Register = () => {
                 <title>Register | Sweet Home</title>
         </Helmet>
 
-            <div className="hero-content flex-col w-[500px] animate__animated animate__zoomIn ">
+            <div className="hero-content flex-col w-[400px] md:w-[500px] animate__animated animate__zoomIn ">
             
                 <h1 className="text-4xl font-bold text-white">Register Here!</h1>
             

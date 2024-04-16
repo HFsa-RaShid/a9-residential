@@ -100,7 +100,7 @@ const handleGithubLogIn = () =>{
             </Helmet>
         
         
-        <div className="hero-content flex-col w-[500px] ">
+        <div className="hero-content flex-col w-[400px] md:w-[500px] ">
           
           <h1 className="text-5xl font-bold text-white">Sign In now!</h1>
           
