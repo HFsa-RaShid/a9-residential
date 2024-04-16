@@ -17,7 +17,7 @@ const UpdateProfile = () => {
    
     useEffect(() => {
         AOS.init({duration: 2000});
-    }, [user]);
+    }, []);
 
     const handleUpdate = e =>{
         e.preventDefault();
@@ -30,13 +30,11 @@ const UpdateProfile = () => {
             displayName: name,
             photoURL: photoUrl,
         })
+       
         
         .then(() =>{
-            setUser({
-                displayName: name,
-                photoURL: photoUrl,
-            })
             
+           
         })
         .catch(error => {
             console.error(error);
