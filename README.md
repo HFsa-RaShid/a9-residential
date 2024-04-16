@@ -1,6 +1,6 @@
-WEBSITE NAME: Sweet Home
+# Website name: Sweet Home
 
-[Live site URL] ()
+# [Live site URL] ()
 
 Features and Characteristics: 
 
@@ -21,3 +21,8 @@ Features and Characteristics:
   Showcases various banks offering loans.
   Presents bank information such as name, interest rates, etc.
   Allows users to explore different loan options conveniently.
+
+# npm package:
++ AOS package
++ Animate.css
++ Swiper Slider

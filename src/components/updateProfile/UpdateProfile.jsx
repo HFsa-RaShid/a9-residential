@@ -12,12 +12,12 @@ import { Helmet } from "react-helmet";
 const UpdateProfile = () => {
     
 
-    const {user} = useContext(AuthContext);
+    const {user,setUser} = useContext(AuthContext);
     const auth = getAuth(app);
-
+   
     useEffect(() => {
         AOS.init({duration: 2000});
-    }, []);
+    }, [user]);
 
     const handleUpdate = e =>{
         e.preventDefault();
@@ -30,12 +30,16 @@ const UpdateProfile = () => {
             displayName: name,
             photoURL: photoUrl,
         })
+        
         .then(() =>{
-           
+            setUser({
+                displayName: name,
+                photoURL: photoUrl,
+            })
             
         })
         .catch(error => {
-            console.error(error)
+            console.error(error);
         })
        
     }
@@ -72,8 +76,7 @@ const UpdateProfile = () => {
                 <button  className="btn bg-black text-white font-bold w-full mt-4">Update</button>
 
             </form>
-            
-            <ToastContainer />
+           
         </div>
     );
 };

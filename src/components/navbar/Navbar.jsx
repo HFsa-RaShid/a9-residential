@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext} from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { RiHomeHeartFill } from "react-icons/ri";
@@ -6,6 +6,7 @@ import 'animate.css';
 const Navbar = () => {
   const {user,logOut} = useContext(AuthContext);
   console.log(user);
+  
   const handleSignOut = () =>{
     logOut()
     .then(() =>{
