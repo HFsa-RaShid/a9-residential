@@ -15,9 +15,9 @@ Features and Characteristics:
 + Dynamic page titles.
 + Challenges Requirements include password visibility toggle, integration of 3 packages, and a protected route for user information editing with Firebase integration.
 + Loan Section:
- - "Apply for Loan" button 
- - Displays a form for loan application upon button click.
+  "Apply for Loan" button 
+  Displays a form for loan application upon button click.
 + Banks for Loan Section:
- - Showcases various banks offering loans.
- - Presents bank information such as name, interest rates, etc.
- - Allows users to explore different loan options conveniently.
+  Showcases various banks offering loans.
+  Presents bank information such as name, interest rates, etc.
+  Allows users to explore different loan options conveniently.
