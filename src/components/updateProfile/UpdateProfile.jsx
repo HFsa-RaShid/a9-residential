@@ -31,7 +31,7 @@ const UpdateProfile = () => {
             photoURL: photoUrl,
         })
         .then(() =>{
-            
+           
             
         })
         .catch(error => {
@@ -53,20 +53,20 @@ const UpdateProfile = () => {
                 <label className="label">
                     <span className="label-text font-bold ">Name</span>
                 </label>
-                <input type="text" name="name" placeholder={user.displayName} className="input input-bordered" />
+                <input type="text" name="name" placeholder={user.displayName} className="input input-bordered" required />
                 </div>
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text font-bold ">Email</span>
                 </label>
-                <input type="email" name="name" placeholder={user.email} className="input input-bordered" />
+                <input type="email" name="name" placeholder={user.email} className="input input-bordered"  />
                 </div>
 
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text font-bold ">Photo URL</span>
                 </label>
-                <input type="text" name="photoUrl" placeholder={user.photoURL} className="input input-bordered" />
+                <input type="text" name="photoUrl" placeholder={user.photoURL} className="input input-bordered" required />
                 </div>
 
                 <button  className="btn bg-black text-white font-bold w-full mt-4">Update</button>
