@@ -2,7 +2,7 @@
 
 # [Live site URL] (https://a9-residential.web.app)
 
-Features and Characteristics: 
+# Features and Characteristics: 
 
 + Navbar with conditional rendering for user authentication and active routes.
 + Login and Register pages with email/password authentication and social media login    options.
