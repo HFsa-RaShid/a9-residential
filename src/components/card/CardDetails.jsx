@@ -4,6 +4,8 @@ import { MdSell } from "react-icons/md";
 import { FaChartArea } from "react-icons/fa";
 import { FaSackDollar } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
+import { VscActivateBreakpoints } from "react-icons/vsc";
+import { FcSerialTasks } from "react-icons/fc";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -40,7 +42,7 @@ const CardDetails = () => {
                 <div className="mt-4">
                 <div className="flex mb-2">
                         <div className="flex items-center gap-2 w-[30%]">
-                        <FaSackDollar />
+                        <FcSerialTasks />
                         <p className="font-bold">ID: </p>
                         </div>
                         <p>{card.id}</p>
@@ -78,7 +80,7 @@ const CardDetails = () => {
 
                 <div className=" flex">
                         <div className="flex w-[30%]  gap-2">
-                            <FaSackDollar />
+                        <VscActivateBreakpoints />
                             <p className="font-bold">Facilities: </p>
                         </div>
                         <div className="">
