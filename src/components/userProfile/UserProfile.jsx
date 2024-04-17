@@ -25,7 +25,7 @@ const UserProfile = () => {
                 </div>
                 <div className="text-center mt-10 md:mt-16 w-[50%] md:w-[65%]">
                     <h1 className="text-[22px] md:text-[35px] font-bold text-[#388385]"><span className="text-black "> Hey!!   </span>{user.displayName}</h1>
-                    <p className="text-[16px] md:text-[20px] font-semibold mb-6">Email: {user.email}</p>
+                    <p className="text-[10px] md:text-[20px] font-semibold mb-6">Email: {user.email}</p>
                     <NavLink to='/updateProfile'><button className="bg-black rounded-xl text-white py-2 px-4 ">Update Profile</button></NavLink>
 
                 </div>

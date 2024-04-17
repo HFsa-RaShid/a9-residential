@@ -48,7 +48,7 @@ const UpdateProfile = () => {
 
 
     return (
-        <div className="w-[80%] md:w-[50%] container mx-auto mt-10 mb-10 border p-10" data-aos = "fade-up">
+        <div className="w-[80%] md:w-[70%] lg:w-[50%] container mx-auto mt-10 mb-10 border p-10" data-aos = "fade-up">
             
             <Helmet>
                 <title>Update Profile | Sweet Home</title>

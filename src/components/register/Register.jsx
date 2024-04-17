@@ -79,14 +79,14 @@ const Register = () => {
                             <label className="label">
                                  <span className="label-text font-bold text-white">Name</span>
                             </label>
-                            <input type="text" name="name" placeholder="Your Name" className="input input-bordered" required />
+                            <input type="text" name="name" placeholder="Enter Your Name" className="input input-bordered" required />
                         </div>
 
                         <div className="form-control">
                         <label className="label">
                             <span className="label-text font-bold text-white">Email</span>
                         </label>
-                        <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
+                        <input type="email" name="email" placeholder="Enter Your Email" className="input input-bordered" required />
                         </div>
 
                         <div className="form-control">
@@ -102,7 +102,7 @@ const Register = () => {
                         </label>
                         <div className="flex relative">
                     
-                            <input type={showPassword ? "text" : "password"} name="password" placeholder="password" className="input input-bordered w-full" required />
+                            <input type={showPassword ? "text" : "password"} name="password" placeholder="Enter Password" className="input input-bordered w-full" required />
 
                             <button type="button" className="absolute right-3 top-4" onClick={() => setShowPassword(!showPassword)} >
                             {showPassword ? <FaEye /> : <FaEyeSlash />}

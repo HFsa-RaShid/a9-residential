@@ -23,7 +23,7 @@ const CardDetails = () => {
     }, []);
 
     return (
-        <div className="md:flex gap-20 h-[850px] md:h-[550px] lg:h-[520px] px-5 md:px-10 lg:px-5 mt-20 container mx-auto" >
+        <div className="md:flex gap-20 h-[850px] md:h-[650px] lg:h-[600px] px-5 md:px-10 lg:px-5 mt-20 container mx-auto" >
             <Helmet>
                 <title>Card Details: {id}| Sweet Home</title>
             </Helmet>
@@ -89,7 +89,7 @@ const CardDetails = () => {
                             ))}
                         </div>
                     </div>
-                <NavLink to='/'><button className="bg-black text-white py-2 px-6 mt-5 mb-5 rounded-2xl">Go Back Home</button></NavLink>
+                <NavLink to='/'><button className="bg-black text-white py-2 px-6 mt-5 mb-10 md:mb-40 rounded-2xl">Go Back Home</button></NavLink>
 
             </div>
             
