@@ -1,22 +1,25 @@
 import { useContext} from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { RiHomeHeartFill } from "react-icons/ri";
 import 'animate.css';
 const Navbar = () => {
-  const {user,logOut} = useContext(AuthContext);
+  const navigate = useNavigate()
+    const {logOut,user,disName,photoLink}= useContext(AuthContext)
+  // const {user,logOut} = useContext(AuthContext);
   console.log(user);
+ 
   
   const handleSignOut = () =>{
     logOut()
     .then(() =>{
-      window.location.href = "/";
+      navigate('/')
     })
     .catch()
 
   }
 
-    const links =
+    const links =(
     <>
       
         <li ><NavLink to='/'>Home</NavLink></li>
@@ -25,6 +28,10 @@ const Navbar = () => {
         <li> <NavLink to='/contact'>Contact Us</NavLink></li>
 
     </>
+    );
+   
+
+
     return (
         <div className="navbar sticky top-0 z-50  shadow-2xl bg-slate-50 container mx-auto">
             <div className="navbar-start ">
@@ -62,7 +69,7 @@ const Navbar = () => {
                         <div className="tooltip tooltip-hover tooltip-bottom" data-tip={user.displayName}>
                           <div className="w-10 h-10 rounded-full border border-black">
                         
-                            <img alt="Tailwind CSS Navbar component" src={user.photoURL} className="h-full w-full mx-auto rounded-full" />
+                            <img  src={user.photoURL ? user.photoURL : photoLink}  className="h-full w-full mx-auto rounded-full" />
                           </div>
     
                         </div>

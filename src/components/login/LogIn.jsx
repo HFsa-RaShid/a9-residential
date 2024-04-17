@@ -149,7 +149,7 @@ const handleGithubLogIn = () =>{
               
           </form>
           
-          <p className="text-center text-white">New to Sweet Home? Please <Link to="/register">
+          <p className="text-center text-white mb-5">New to Sweet Home? Please <Link to="/register">
               <button className="text-blue-400 underline font-bold">Register</button>
           </Link></p>
           </div>
